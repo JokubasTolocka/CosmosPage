@@ -9,6 +9,7 @@
     background-color: #ff3053;
 }
 .statistics h1{
+    text-align: center;
     text-shadow: 7px 3px 8px rgba(71,25,25,0.27);
     color: white;
 }
@@ -55,6 +56,11 @@
     margin: 0;
     padding: 0;
     background-color: #ff3053;
+}
+@media screen and (max-width: 700px){
+    .statistics img{
+        height: 300px;
+    }
 }
 
 @keyframes RoverAppears{
