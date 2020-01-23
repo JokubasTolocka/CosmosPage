@@ -1,0 +1,12 @@
+{
+    "name": "cosmos",
+    "version": "1.0.0",
+    "description": "Explore. Explore. Explore.",
+    "scripts": {
+      "start": "serve"
+    },
+    "dependencies": {
+      "serve": "^10.0.1"
+    },
+    "author": "Jokubas"
+  }

@@ -1,0 +1,97 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+.landing{
+    z-index: 2;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ff3053;
+}
+.svg-sat{
+    
+    animation: 4s linear 0s satelliteAnimation;
+    animation-iteration-count: infinite;
+}
+
+.satellite{
+    z-index: 2;
+    
+    animation: 4s linear 0s satelliteMoving;
+    animation-iteration-count: infinite;
+}
+
+.landing img{
+    opacity: 0;
+}
+
+.landing h1{
+    color: white;
+    font-weight: 800;
+    font-size: 3em;
+    margin-bottom: 25px;
+    animation: 1s ease-out 0.5s landingTextPopUp;
+    animation-fill-mode: forwards;
+}
+.landing h1,.landing h3{
+    text-shadow: 7px 3px 8px rgba(71,25,25,0.27);
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.landing h3{
+    color: #ededed;
+    margin-top: 0;
+    animation: 1s ease-out 1.5s landingTextPopUp;
+    animation-fill-mode: forwards;
+}
+#Planet{
+    animation: 12s linear 0s rotate;
+    transform-origin: center;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes landingTextPopUp{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes satelliteAnimation{
+    0%{
+        -webkit-transform: scale(0);
+    }
+    50%{
+        -webkit-transform: scale(1);
+    }
+    100%{
+        -webkit-transform: scale(0);
+    }
+}
+
+@keyframes satelliteMoving{
+    0%{
+        transform: translateX(-200px);
+    }
+    50%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(200px);
+    }
+}
+
+@keyframes rotate{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}

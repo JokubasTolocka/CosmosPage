@@ -1,0 +1,117 @@
+.info{
+    background-color: #262626;
+    color: white;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+.info h1{
+    text-shadow: 7px 3px 8px rgba(71,25,25,0.27);
+    text-align: center;
+    font-weight: 800;
+}
+
+.info h3{
+    text-shadow: 7px 3px 8px rgba(71,25,25,0.27);
+    padding-bottom: 50px;
+    font-weight: 100;
+    width: 500px;
+    color: #ededed;
+    text-align: center;
+}
+
+.info iframe{
+    border-radius: 30px;
+    border: none;
+    -webkit-box-shadow: 0px 11px 45px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 11px 45px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 11px 45px 0px rgba(0,0,0,0.75);
+}
+.info svg{
+    padding: 60px 60px;
+}
+.info .video-and-svg{
+    flex-direction: row;
+    justify-content: space-between;
+}
+#LargerPlanet{
+    animation: 30s linear rotateLarge;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+}
+#middlePlanet{
+    animation: 30s linear rotateMiddle;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+}
+
+#Smile{
+    animation: 6s linear 3s UpDown;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+}
+#Eye{
+    animation: 4s linear 2s EyeMovement;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+}
+
+
+@media screen and (max-width: 1365px){
+    .info svg{
+        display: none;
+    }
+    .info iframe{
+        width: 500px;
+        height: 315px;
+    }
+}
+@keyframes rotateLarge{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes rotateMiddle{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(-360deg);
+    }
+}
+@keyframes UpDown{
+    0%{
+        transform: translateY(0px);
+    }
+    30%{
+        transform: translateY(-15px);
+    }
+    60%{
+        transform: translateY(0px);
+    }
+    80%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes EyeMovement{
+    0%{
+        transform: scaleY(1);
+    }
+    2.5%{
+        transform: scaleY(0);
+    }
+    5%{
+        transform: scaleY(1);
+    }
+}
